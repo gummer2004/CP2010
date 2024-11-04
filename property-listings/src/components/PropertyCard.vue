@@ -1,5 +1,5 @@
 <template>
-        <section class="w-64 m-4">
+        <section class="w-64 m-4 mb-14">
         <div class="relative ">
             <img class="w-full rounded-lg" :src="property.imageURL" :alt="property.imageAlt">
         </div>

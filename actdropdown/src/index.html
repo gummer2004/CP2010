@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account DropDown Menu</title>
+    <link rel="stylesheet" href="output.css">
+    <script src="//unpkg.com/alpinejs" defer></script>
+</head>
+<body class="bg-gray-300">
+    <div class=" pt-4 pb-32 w-64 px-6 relative" x-data="{open: false}">
+        <button @click="open=!open"
+        class="block h-8 w-8 z-20 overflow-hidden rounded-full border-2 border-gray-600  hover:border-white focus:border-white focus:outline-none relative"
+        >
+            <img class="h-full w-full object-cover" src="https://plus.unsplash.com/premium_photo-1695582638376-bd4ab9c3d9bd?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="user">
+        </button>
+        <div x-show="open" class="absolute top-6 left-10  mt-2 py-2 w-48 bg-white rounded-lg shadow-xl">
+            <a class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white focus:bg-indigo-500 focus:text-white" href="#">Account Settings</a>
+            <a class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white focus:bg-indigo-500 focus:text-white" href="#">Support</a>
+            <a class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white focus:bg-indigo-500 focus:text-white" href="#">Sing out</a>
+        </div>
+    </div>
+</body>
+</html>

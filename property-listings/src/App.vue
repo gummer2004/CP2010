@@ -1,9 +1,11 @@
 <script>
 import PropertyCard from './components/PropertyCard.vue';
+import Navbar from './components/Navbar.vue';
 
 export default{
   components:{
-    PropertyCard
+    PropertyCard,
+    Navbar,
   },
   data: () => ({
     property1: {
@@ -30,15 +32,29 @@ export default{
       reviewCount: 12,
       rating: 3,
     },
+    property3: {
+      imageURL: '/images/malibu.jpg',
+      imageAlt:"TO Skyline",
+      isNew: true,
+      beds: 3,
+      baths:2,
+      title:"Modern home in center city",
+      priceInCents: 140000,
+      formatedPrice:"$1,400",
+      reviewCount: 12,
+      rating: 4,
+    },
   })
   
 }
 </script>
 
 <template>
-  <div class="flex">
+  <Navbar/>
+  <div class="flex flex-col sm:flex-row flex-wrap">
     <PropertyCard :property="property1" />
     <PropertyCard :property="property2" />
+    <PropertyCard :property="property3" />
  
   </div>
  
